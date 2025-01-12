@@ -1,3 +1,9 @@
+Shrnutí:
+- Tento kód využívá mikrořadič Raspberry Pi Pico W k simulaci stisku klávesy na počítači na základě hodnoty čtené z potenciometru. Pomocí knihovny usb_hid 
+  je nastaveno zařízení jako virtuální klávesnice, která umožňuje odesílat stisky kláves. Potenciometr je připojen na pin 26 a čte hodnoty, které se mapují na
+  stisk klávesy „Space“. Pokud hodnota potenciometru překročí stanovený práh (40000), simuluje se stisk klávesy. Kód pravidelně čte hodnoty potenciometru a 
+  odesílá příslušné signály, což umožňuje použít tento systém jako ruční brzdu v simulacích nebo hrách.
+
 Co a jak funguje
 
 - ADC(26): Připojil jsem potenciometr na pin GP26, který je analogový pin na Raspberry Pi Pico W.

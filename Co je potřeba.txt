@@ -1,0 +1,6 @@
+Co bude potřeba:
+Raspberry Pi Pico W (micro controller)
+Ruční brzda / tyč a housing na controller (pro ovládání)
+Potenciometr (pro nastavení hodnoty brzdy)
+Drátky (pro připojení komponent a počítače)
+Simulátor který podporuje ,,custom binding" (např. Euro Truck Simulator, Assetto Corsa apod.)

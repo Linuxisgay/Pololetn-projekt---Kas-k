@@ -1,0 +1,9 @@
+Co a jak funguje
+
+- ADC(26): Připojil jsem potenciometr na pin GP26, který je analogový pin na Raspberry Pi Pico W.
+
+- k.press(Keycode.SPACE): Simuluje stisk klávesy, která bude fungovat jako ruční brzda v simulátoru. Můžeš nahradit SPACE jinou klávesou, kterou podporuje simulátor (např. W, B pro brzdu).
+
+- Hodnota potenciometru: Čte hodnotu mezi 0 a 65535. Čím vyšší hodnota, tím blíže je potenciometr k plnému brzdnému výkonu (plné brzdění).
+
+- Funkce bs(): Pokud je hodnota potenciometru vyšší než 40000, považuje se to za "stisknutí" brzdy a pošle signál. Jinak klávesa nebude stisknutá.

@@ -1,0 +1,42 @@
+# naimportujeme knihovny nezbytné pro kód
+
+import machine
+import time
+import usb_hid
+from usb_hid import devices
+from usb_hid.device import Keyboard
+from machine import ADC
+
+
+# nastavení pinu pro čtení hodnoty z potenciometru
+
+p = ADC(26)  # pin pro připojení potenciometru
+mv = 65535  # maximální hodnota pro ADC
+
+
+# nastavení klávesnice pro simulaci stisků
+
+k = Keyboard(usb_hid.devices)
+
+
+# funkce pro čtení hodnoty z potenciometru
+
+def read_potentiometer():
+    return p.read_u16()  # čtení hodnoty z potenciometru
+
+
+# funkce pro odesílání signálů na klávesnici
+
+def bs(value):
+    if value > 40000:  # pokud potenciometr ukazuje hodnotu nad 40000, pošleme signál
+        k.press(Keycode.SPACE)  # můžeme použít space pro simulaci stisku ruční brzdy
+    else:
+        k.release(Keycode.SPACE)  # uvolnění klávesy
+
+
+# hlavní cykl
+
+while True:
+    potv = read_potentiometer()  # získáme hodnoty potenciometru
+    bs(potv)  # odeslání signálu na základě hodnoty potenciometru
+    time.sleep(0.1)  # krátká prodleva mezi čteními

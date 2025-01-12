@@ -1,0 +1,6 @@
+Úvaha:
+-  Tato ruční brzda nabízí realistické ovládání díky své konstrukci a použitým materiálům, což zlepšuje celkový zážitek z hraní a simulací. 
+   Projekt demonstruje potenciál 3D tisku a otevřených hardwarových platforem pro vytváření interaktivních zařízení.
+
+- Ruční brzda bude fungovat tak, že připojíte potenciometr nebo jiný analogový snímač k Raspberry Pi Pico W, který bude vysílat hodnotu na počítač 
+  jako vstup pro simulátor. Tento vstup může být přeložen do akce v simulátoru, například ve formě klávesového stisku nebo hodnoty joysticku.
